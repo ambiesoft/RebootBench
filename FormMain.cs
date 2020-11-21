@@ -10,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static RebootBench.WinApi;
 
 namespace RebootBench
 {
@@ -56,17 +57,32 @@ namespace RebootBench
         }
         private void btnStart_Click(object sender, EventArgs e)
         {
+            if(DialogResult.Yes != MessageBox.Show(Properties.Resources.ARE_YOU_SURE_TO_REBOOT,
+                Application.ProductName,
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question,
+                MessageBoxDefaultButton.Button2))
+            {
+                return;
+            }
             string epochtimeString = getEpochNow().ToString();
-            string localhtmlfile = Path.Combine(
-                Path.GetDirectoryName(Application.ExecutablePath),
-                "html",
-                "rebooted.html");
+            //string localhtmlfile = Path.Combine(
+            //    Path.GetDirectoryName(Application.ExecutablePath),
+            //    "html",
+            //    "rebooted.html");
             string app = Application.ExecutablePath;
             string arg = string.Format("--starttime {0}", epochtimeString);
 
             CreateShortcut(app, arg);
 
-            // Do reboot here
+            AdjustToken();
+            ExitWindowsEx(ExitWindows.EWX_REBOOT, 0);
+            //WinApi.ExitWindowsEx(
+            //    WinApi.ExitWindows.Reboot,
+            //    WinApi.ShutdownReason.MajorOther |
+            //    WinApi.ShutdownReason.MinorOther |
+            //    WinApi.ShutdownReason.FlagPlanned);
+
         }
     }
 }

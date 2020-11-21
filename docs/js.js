@@ -6,6 +6,9 @@ function getQuerystringNameValue(name)
     // page.htm?name1=100&name2=101&name3=102
 
     var winURL = window.location.hash;
+    if(!winURL)
+      return '';
+
     var queryStringArray = winURL.split("#");
     var queryStringParamArray = queryStringArray[1].split("&");
     var nameValue = null;
@@ -60,7 +63,11 @@ function calcTime()
     let elem = document.getElementById("reboottime");
 
     let starttime = getQuerystringNameValue("starttime");
-    
+    if(!starttime)
+    {
+        elem.innerText = "<unknown>";
+        return;
+    }
     let dtstartTime = new Date(0);
     dtstartTime.setUTCMilliseconds(starttime);
 
