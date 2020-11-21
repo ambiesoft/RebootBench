@@ -1,4 +1,5 @@
-﻿using System;
+﻿using IWshRuntimeLibrary;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -22,9 +23,9 @@ namespace RebootBench
         }
 
         // https://stackoverflow.com/a/4897700
-        private void urlShortcutToDesktop(string linkName, string linkUrl)
+        private void urlShortcutToStartup(string linkName, string linkUrl)
         {
-            string deskDir = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory);
+            string deskDir = Environment.GetFolderPath(Environment.SpecialFolder.Startup);
 
             using (StreamWriter writer = new StreamWriter(deskDir + "\\" + linkName + ".url"))
             {
@@ -36,24 +37,36 @@ namespace RebootBench
         long getEpochNow()
         {
             // return DateTimeOffset.Now.ToUnixTimeSeconds();
-            return (long)(DateTime.UtcNow - new DateTime(1970, 1, 1)).TotalMilliseconds;
+            return (long)(DateTime.UtcNow - (new DateTime(1970, 1, 1))).TotalMilliseconds;
             //TimeSpan t = DateTime.UtcNow - new DateTime(1970, 1, 1);
             //return t.TotalSeconds;
         }
+
+        private void CreateShortcut(string app,string arg)
+        {
+            object startup = (object)"Startup";
+            WshShell shell = new WshShell();
+            string shortcutAddress = Program.getStartupShortcutFile(); // (string)shell.SpecialFolders.Item(ref startup) + @"\RebootBench.lnk";
+            IWshShortcut shortcut = (IWshShortcut)shell.CreateShortcut(shortcutAddress);
+            // shortcut.Description = "New shortcut for a Notepad";
+            // shortcut.Hotkey = "Ctrl+Shift+N";
+            shortcut.TargetPath = app;
+            shortcut.Arguments = arg;
+            shortcut.Save();
+        }
         private void btnStart_Click(object sender, EventArgs e)
         {
-            string hash = string.Format("#starttime={0}", getEpochNow());
-            //string htmlfile = Path.Combine(
-            //    Path.GetDirectoryName(Application.ExecutablePath),
-            //    "html",
-            //    "rebooted.html");
-            //Uri uri = new Uri(htmlfile);
-            Uri uri = new Uri("https://ambiesoft.github.io/RebootBench/rebooted.html" + hash);
+            string epochtimeString = getEpochNow().ToString();
+            string localhtmlfile = Path.Combine(
+                Path.GetDirectoryName(Application.ExecutablePath),
+                "html",
+                "rebooted.html");
+            string app = Application.ExecutablePath;
+            string arg = string.Format("--starttime {0}", epochtimeString);
 
-            Process.Start(new ProcessStartInfo(uri.AbsoluteUri)
-                { UseShellExecute = true });
+            CreateShortcut(app, arg);
 
-            // Process.Start(uri.AbsoluteUri);
+            // Do reboot here
         }
     }
 }

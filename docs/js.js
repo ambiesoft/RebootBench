@@ -46,14 +46,25 @@ function timeSince(when) { // this ignores months
     obj.years = (obj._days - obj.days) / 365;
     return obj;
 }
+function formatSpan(val)
+{
+    val = val.toString();
+    while(val.length < 2)
+    {
+        val = "0" + val;
+    }
+    return val;
+}
 function calcTime()
 {
     let elem = document.getElementById("reboottime");
 
     let starttime = getQuerystringNameValue("starttime");
+    
     let dtstartTime = new Date(0);
     dtstartTime.setUTCMilliseconds(starttime);
 
     let span = timeSince(dtstartTime);
-    elem.innerText = span.minutes + ":" + span.seconds;
+
+    elem.innerText = formatSpan(span.hours) + ":" + formatSpan(span.minutes) + ":" + formatSpan( span.seconds);
 }   
