@@ -47,16 +47,16 @@ namespace RebootBench
             // 
             // btnCancel
             // 
-            this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             resources.ApplyResources(this.btnCancel, "btnCancel");
+            this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.UseVisualStyleBackColor = true;
             // 
             // gbStartup
             // 
+            resources.ApplyResources(this.gbStartup, "gbStartup");
             this.gbStartup.Controls.Add(this.rbThisApp);
             this.gbStartup.Controls.Add(this.rbBrower);
-            resources.ApplyResources(this.gbStartup, "gbStartup");
             this.gbStartup.Name = "gbStartup";
             this.gbStartup.TabStop = false;
             // 

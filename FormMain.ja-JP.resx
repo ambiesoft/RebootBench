@@ -63,4 +63,20 @@
   <data name="btnCancel.Text" xml:space="preserve">
     <value>キャンセル(&amp;C)</value>
   </data>
+  <data name="gbStartup.Text" xml:space="preserve">
+    <value>スタートアップ</value>
+  </data>
+  <assembly alias="System.Drawing.Primitives" name="System.Drawing.Primitives, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="rbThisApp.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>130, 19</value>
+  </data>
+  <data name="rbThisApp.Text" xml:space="preserve">
+    <value>このアプリケーション(&amp;T)</value>
+  </data>
+  <data name="rbBrower.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>210, 19</value>
+  </data>
+  <data name="rbBrower.Text" xml:space="preserve">
+    <value>ブラウザ （ネットワーク接続が必要)(&amp;B)</value>
+  </data>
 </root>
