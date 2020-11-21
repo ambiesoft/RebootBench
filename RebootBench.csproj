@@ -1,0 +1,13 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+  </PropertyGroup>
+
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="mkdir &quot;$(TargetDir)\html&quot;&#xD;&#xA;copy &quot;$(SolutionDir)\html\rebooted.html&quot; &quot;$(TargetDir)\html\&quot;&#xD;&#xA;copy &quot;$(SolutionDir)\html\js.js&quot; &quot;$(TargetDir)\html\&quot;&#xD;&#xA;" />
+  </Target>
+
+</Project>
