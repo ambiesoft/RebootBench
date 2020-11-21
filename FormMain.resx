@@ -57,34 +57,16 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="&gt;&gt;btnStart.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
   <assembly alias="System.Drawing.Primitives" name="System.Drawing.Primitives, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing.Primitives">
-    <value>7, 15</value>
-  </data>
-  <data name="&gt;&gt;btnStart.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <assembly alias="System.Private.CoreLib" name="System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e" />
-  <data name="btnCancel.TabIndex" type="System.Int32, System.Private.CoreLib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;btnCancel.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
   <data name="btnStart.Location" type="System.Drawing.Point, System.Drawing.Primitives">
     <value>314, 332</value>
   </data>
-  <data name="btnCancel.Text" xml:space="preserve">
-    <value>&amp;Cancel</value>
+  <data name="btnStart.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>145, 23</value>
   </data>
+  <assembly alias="System.Private.CoreLib" name="System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e" />
   <data name="btnStart.TabIndex" type="System.Int32, System.Private.CoreLib">
     <value>0</value>
-  </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>FormMain</value>
   </data>
   <data name="btnStart.Text" xml:space="preserve">
     <value>&amp;Start Reboot</value>
@@ -92,37 +74,133 @@
   <data name="&gt;&gt;btnStart.Name" xml:space="preserve">
     <value>btnStart</value>
   </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnCancel.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;btnCancel.Name" xml:space="preserve">
-    <value>btnCancel</value>
-  </data>
-  <data name="&gt;&gt;btnStart.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="btnCancel.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>112, 23</value>
-  </data>
-  <data name="btnStart.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>145, 23</value>
-  </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>589, 367</value>
-  </data>
-  <data name="&gt;&gt;btnCancel.Type" xml:space="preserve">
+  <data name="&gt;&gt;btnStart.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Form1</value>
+  <data name="&gt;&gt;btnStart.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnStart.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
   <data name="btnCancel.Location" type="System.Drawing.Point, System.Drawing.Primitives">
     <value>465, 332</value>
   </data>
+  <data name="btnCancel.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>112, 23</value>
+  </data>
+  <data name="btnCancel.TabIndex" type="System.Int32, System.Private.CoreLib">
+    <value>1</value>
+  </data>
+  <data name="btnCancel.Text" xml:space="preserve">
+    <value>&amp;Cancel</value>
+  </data>
+  <data name="&gt;&gt;btnCancel.Name" xml:space="preserve">
+    <value>btnCancel</value>
+  </data>
+  <data name="&gt;&gt;btnCancel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnCancel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnCancel.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="rbThisApp.AutoSize" type="System.Boolean, System.Private.CoreLib">
+    <value>True</value>
+  </data>
+  <data name="rbThisApp.Location" type="System.Drawing.Point, System.Drawing.Primitives">
+    <value>6, 47</value>
+  </data>
+  <data name="rbThisApp.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>108, 19</value>
+  </data>
+  <data name="rbThisApp.TabIndex" type="System.Int32, System.Private.CoreLib">
+    <value>1</value>
+  </data>
+  <data name="rbThisApp.Text" xml:space="preserve">
+    <value>&amp;This application</value>
+  </data>
+  <data name="&gt;&gt;rbThisApp.Name" xml:space="preserve">
+    <value>rbThisApp</value>
+  </data>
+  <data name="&gt;&gt;rbThisApp.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;rbThisApp.Parent" xml:space="preserve">
+    <value>gbStartup</value>
+  </data>
+  <data name="&gt;&gt;rbThisApp.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="rbBrower.AutoSize" type="System.Boolean, System.Private.CoreLib">
+    <value>True</value>
+  </data>
+  <data name="rbBrower.Location" type="System.Drawing.Point, System.Drawing.Primitives">
+    <value>6, 22</value>
+  </data>
+  <data name="rbBrower.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>203, 19</value>
+  </data>
+  <data name="rbBrower.TabIndex" type="System.Int32, System.Private.CoreLib">
+    <value>0</value>
+  </data>
+  <data name="rbBrower.Text" xml:space="preserve">
+    <value>&amp;Browser (requires net connection)</value>
+  </data>
+  <data name="&gt;&gt;rbBrower.Name" xml:space="preserve">
+    <value>rbBrower</value>
+  </data>
+  <data name="&gt;&gt;rbBrower.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;rbBrower.Parent" xml:space="preserve">
+    <value>gbStartup</value>
+  </data>
+  <data name="&gt;&gt;rbBrower.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="gbStartup.Location" type="System.Drawing.Point, System.Drawing.Primitives">
+    <value>12, 94</value>
+  </data>
+  <data name="gbStartup.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>565, 87</value>
+  </data>
+  <data name="gbStartup.TabIndex" type="System.Int32, System.Private.CoreLib">
+    <value>2</value>
+  </data>
+  <data name="gbStartup.Text" xml:space="preserve">
+    <value>StartUp</value>
+  </data>
+  <data name="&gt;&gt;gbStartup.Name" xml:space="preserve">
+    <value>gbStartup</value>
+  </data>
+  <data name="&gt;&gt;gbStartup.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;gbStartup.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;gbStartup.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <metadata name="$this.Localizable" type="System.Boolean, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
     <value>True</value>
   </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing.Primitives">
+    <value>7, 15</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>589, 367</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Form1</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>FormMain</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
 </root>

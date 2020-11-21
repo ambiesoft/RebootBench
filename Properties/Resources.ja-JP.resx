@@ -120,4 +120,10 @@
   <data name="ARE_YOU_SURE_TO_REBOOT" xml:space="preserve">
     <value>再起動をしますか？</value>
   </data>
+  <data name="STR_RESULT" xml:space="preserve">
+    <value>再起動にかかった時間は {0} です。</value>
+  </data>
+  <data name="UNKNOWN_STARTUP_TYPE" xml:space="preserve">
+    <value>認識できないスタートアップタイプ '{0}'</value>
+  </data>
 </root>

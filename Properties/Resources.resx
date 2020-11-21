@@ -120,4 +120,10 @@
   <data name="ARE_YOU_SURE_TO_REBOOT" xml:space="preserve">
     <value>Are you sure to reboot now?</value>
   </data>
+  <data name="STR_RESULT" xml:space="preserve">
+    <value>The time it takes for rebooting was {0}.</value>
+  </data>
+  <data name="UNKNOWN_STARTUP_TYPE" xml:space="preserve">
+    <value>Unknown startup type '{0}'</value>
+  </data>
 </root>

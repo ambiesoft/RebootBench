@@ -35,13 +35,6 @@ namespace RebootBench
             }
         }
 
-        long getEpochNow()
-        {
-            // return DateTimeOffset.Now.ToUnixTimeSeconds();
-            return (long)(DateTime.UtcNow - (new DateTime(1970, 1, 1))).TotalMilliseconds;
-            //TimeSpan t = DateTime.UtcNow - new DateTime(1970, 1, 1);
-            //return t.TotalSeconds;
-        }
 
         private void CreateShortcut(string app,string arg)
         {
@@ -65,13 +58,15 @@ namespace RebootBench
             {
                 return;
             }
-            string epochtimeString = getEpochNow().ToString();
+            string epochtimeString = Program.getEpochNow().ToString();
             //string localhtmlfile = Path.Combine(
             //    Path.GetDirectoryName(Application.ExecutablePath),
             //    "html",
             //    "rebooted.html");
             string app = Application.ExecutablePath;
-            string arg = string.Format("--starttime {0}", epochtimeString);
+            string arg = string.Format("--starttime {0} --startup {1}", 
+                epochtimeString,
+                rbBrower.Checked ? "browser" : "rebootbench");
 
             CreateShortcut(app, arg);
 
