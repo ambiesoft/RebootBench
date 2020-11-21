@@ -43,12 +43,12 @@ namespace RebootBench
         private void btnStart_Click(object sender, EventArgs e)
         {
             string hash = string.Format("#starttime={0}", getEpochNow());
-            string htmlfile = Path.Combine(
-                Path.GetDirectoryName(Application.ExecutablePath),
-                "html",
-                "rebooted.html");
-            Uri uri = new Uri(htmlfile);
-            uri = new Uri(uri.AbsoluteUri + hash);
+            //string htmlfile = Path.Combine(
+            //    Path.GetDirectoryName(Application.ExecutablePath),
+            //    "html",
+            //    "rebooted.html");
+            //Uri uri = new Uri(htmlfile);
+            Uri uri = new Uri("https://ambiesoft.github.io/RebootBench/rebooted.html" + hash);
 
             Process.Start(new ProcessStartInfo(uri.AbsoluteUri)
                 { UseShellExecute = true });
