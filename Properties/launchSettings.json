@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "RebootBench": {
+      "commandName": "Project",
+      "commandLineArgs": "--starttime 1606108662341 --startup rebootbench"
+    }
+  }
+}
