@@ -106,12 +106,12 @@ namespace RebootBench
 
                     string message = string.Format(Properties.Resources.STR_RESULT,
                         toTimeString(span));
-                    MessageBox.Show(message,
-                        Application.ProductName,
-                        MessageBoxButtons.OK,
-                        MessageBoxIcon.Information);
 
-                    return;
+                    using (FormResult form = new FormResult(message))
+                    {
+                        if (DialogResult.Retry != form.ShowDialog())
+                            return;
+                    }
                 }
                 else
                 {
@@ -120,9 +120,9 @@ namespace RebootBench
                     return;
                 }
             }
-            else
+
+            using (FormMain formMain = new FormMain())
             {
-                FormMain formMain = new FormMain();
                 formMain.ShowDialog();
             }
         }
