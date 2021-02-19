@@ -65,7 +65,8 @@ function calcTime()
     let starttime = getQuerystringNameValue("starttime");
     if(!starttime)
     {
-        elem.innerText = "<unknown>";
+        let parsed = getQuerystringNameValue("parsed");
+        elem.innerText = parsed
         return;
     }
     let dtstartTime = new Date(0);
@@ -74,4 +75,6 @@ function calcTime()
     let span = timeSince(dtstartTime);
 
     elem.innerText = formatSpan(span.hours) + ":" + formatSpan(span.minutes) + ":" + formatSpan( span.seconds);
+
+    location.hash = 'parsed=' + elem.innerText;
 }   

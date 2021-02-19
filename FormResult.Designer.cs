@@ -39,7 +39,7 @@ namespace RebootBench
             // 
             this.btnRetry.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnRetry.DialogResult = System.Windows.Forms.DialogResult.Retry;
-            this.btnRetry.Location = new System.Drawing.Point(277, 181);
+            this.btnRetry.Location = new System.Drawing.Point(277, 167);
             this.btnRetry.Name = "btnRetry";
             this.btnRetry.Size = new System.Drawing.Size(117, 23);
             this.btnRetry.TabIndex = 300;
@@ -50,7 +50,7 @@ namespace RebootBench
             // 
             this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnClose.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnClose.Location = new System.Drawing.Point(400, 181);
+            this.btnClose.Location = new System.Drawing.Point(400, 167);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(102, 23);
             this.btnClose.TabIndex = 400;
@@ -81,7 +81,7 @@ namespace RebootBench
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnClose;
-            this.ClientSize = new System.Drawing.Size(514, 216);
+            this.ClientSize = new System.Drawing.Size(514, 202);
             this.Controls.Add(this.lblResult);
             this.Controls.Add(this.txtResult);
             this.Controls.Add(this.btnClose);
