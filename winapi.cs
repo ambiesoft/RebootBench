@@ -44,7 +44,7 @@ namespace RebootBench
             IntPtr PreviousState,
             IntPtr ReturnLength);
 
-        //シャットダウンするためのセキュリティ特権を有効にする
+        // Enable security privileges to shutdown
         public static void AdjustToken()
         {
             const uint TOKEN_ADJUST_PRIVILEGES = 0x20;
@@ -57,20 +57,19 @@ namespace RebootBench
 
             IntPtr procHandle = GetCurrentProcess();
 
-            //トークンを取得する
+            // Obtain a token
             IntPtr tokenHandle;
             OpenProcessToken(procHandle,
                 TOKEN_ADJUST_PRIVILEGES | TOKEN_QUERY, out tokenHandle);
-            //LUIDを取得する
+            // Obtain LUID
             TOKEN_PRIVILEGES tp = new TOKEN_PRIVILEGES();
             tp.Attributes = SE_PRIVILEGE_ENABLED;
             tp.PrivilegeCount = 1;
             LookupPrivilegeValue(null, SE_SHUTDOWN_NAME, out tp.Luid);
-            //特権を有効にする
+            // Enable Privileges
             AdjustTokenPrivileges(
                 tokenHandle, false, ref tp, 0, IntPtr.Zero, IntPtr.Zero);
 
-            //閉じる
             CloseHandle(tokenHandle);
         }
 

@@ -1,3 +1,6 @@
+2024/05/17 v2.0.1
+Migrated to .NET6.0
+
 2021/02/19 v1.0.1
 Fix Pos
 html: Prevent changing time after reload page
